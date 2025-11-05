@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator - YunusEmre Gamer</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>QR Code Generator</h2></header>
+
+    <input type="text" id="qr-input" placeholder="Enter text or URL...">
+    <button onclick="generateQR()">Generate QR Code</button>
+    
+    <canvas id="qr-code"></canvas>
+
+    <script>
+        function generateQR() {
+            const qr = new QRious({
+                element: document.getElementById('qr-code'),
+                size: 200,
+                value: document.getElementById('qr-input').value
+            });
+        }
+    </script>
+</body>
+</html>

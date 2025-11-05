@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #0f0f17);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff3355, #ff9955);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 5px rgba(255, 51, 85, 0.5),
+        0 0 10px rgba(255, 153, 85, 0.3);
+    animation: subtleNeon 6s ease-in-out infinite alternate;
+}
+
+@keyframes subtleNeon {
+    0% { text-shadow: 0 0 5px rgba(255, 51, 85, 0.5), 0 0 10px rgba(255, 153, 85, 0.3); }
+    50% { text-shadow: 0 0 8px rgba(255, 51, 85, 0.6), 0 0 15px rgba(255, 153, 85, 0.4); }
+    100% { text-shadow: 0 0 5px rgba(255, 51, 85, 0.5), 0 0 10px rgba(255, 153, 85, 0.3); }
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow:
+        0 0 5px #ff0055,
+        0 0 10px #ff0055,
+        0 0 20px #ff5500;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    text-shadow: 0 0 5px rgba(255, 85, 0, 0.4);
+}
+
+h1:hover, h2:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px #ff0055);
+    transition: all 0.3s ease;
+}
+
+
+
+button, .btn {
+    background: linear-gradient(45deg, #ff0055, #ff5500, #ff0055);
+    background-size: 200% 200%;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+    animation: gradientMove 3s ease infinite;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 85, 0, 0.6);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+input:disabled {
+    font-size:  54px;
+    background: #1e1e2f;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: not-allowed;
+}

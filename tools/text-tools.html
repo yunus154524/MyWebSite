@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Tools - YunusEmre Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>Text Converter</h2></header>
+
+    <textarea id="text-input" placeholder="Enter your text..."></textarea>
+    
+    <div class="tool-buttons">
+        <button onclick="toUpper()">UPPERCASE</button>
+        <button onclick="toLower()">lowercase</button>
+        <button onclick="reverseText()">Reverse</button>
+    </div>
+
+    <textarea id="text-output" placeholder="Result..." readonly></textarea>
+
+    <script>
+        function toUpper() {
+            document.getElementById('text-output').value = document.getElementById('text-input').value.toUpperCase();
+        }
+        function toLower() {
+            document.getElementById('text-output').value = document.getElementById('text-input').value.toLowerCase();
+        }
+        function reverseText() {
+            document.getElementById('text-output').value = document.getElementById('text-input').value.split("").reverse().join("");
+        }
+    </script>
+</body>
+</html>
